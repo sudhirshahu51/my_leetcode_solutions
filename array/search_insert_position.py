@@ -1,4 +1,5 @@
 #problem link https://leetcode.com/problems/search-insert-position/
+#Binary search
 
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
