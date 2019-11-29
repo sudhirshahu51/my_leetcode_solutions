@@ -20,19 +20,3 @@ class Solution:
 
 
 
-class Solution:
-    def getRow(self, rowIndex: int) -> List[int]:
-        
-        res = [[0 for _ in range(i+1)] for i in range(rowIndex+1)]
-        
-        def helper(i,j):
-            if j==0 or j==i: return 1
-            if res[i][j] == 0:
-                res[i][j] = helper(i-1, j) + helper(i-1, j-1)
-            return res[i][j]
-        
-        row = res[rowIndex]
-        for j in range(rowIndex+1):
-            row[j] = helper(rowIndex,j) 
-
-        return res[rowIndex]
